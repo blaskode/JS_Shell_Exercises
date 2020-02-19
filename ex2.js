@@ -34,7 +34,7 @@ function guess_number(){
 	from Celsius to Fahrenheit.
 */
 function celsius_to_f(celsius){
-	f = celsius * 9/5 + 32;
+	const f = celsius * 9/5 + 32;
 	return f;
 }
 
@@ -42,8 +42,8 @@ function celsius_to_f(celsius){
 	(4) Write a function to convert temperatures
 	from Fahrenheit to Celsius.
 */
-function celsius_to_f(celsius){
-	c = (fahrenheit - 32) * 5/9;
+function fahrenheit_to_c(fahrenheit){
+	const c = (fahrenheit - 32) * 5/9;
 	return c;
 }
 
@@ -67,9 +67,9 @@ function add_py(str){
 	than or equal to 1.
 */
 function switch_first_last(str){
-	first = str.substr(0, 1);
-	last = str.substr((str.length - 1), 1);
-	middle = str.slice(1, str.length - 1);
+	const first = str.substr(0, 1);
+	const last = str.substr((str.length - 1), 1);
+	const middle = str.slice(1, str.length - 1);
 	return last + middle + first;
 }
 
@@ -78,8 +78,8 @@ function switch_first_last(str){
 	position of a given string and return the new string.
 */
 function remove_char_at(str, pos){
-	first = str.slice(0, pos);
-	last = str.slice(pos + 1, str.length);
+	const first = str.slice(0, pos);
+	const last = str.slice(pos + 1, str.length);
 	return first + last;
 }
 
@@ -88,7 +88,7 @@ function remove_char_at(str, pos){
 	number is a multiple of 3 or a multiple of 7.
 */
 function div_by_3_or_7(num){
-	truth = (num % 7 == 0) || (num % 3 == 0);
+	const truth = (num % 7 == 0) || (num % 3 == 0);
 	return truth;
 }
 
@@ -99,7 +99,7 @@ function div_by_3_or_7(num){
 */
 
 function last_three(str){
-	end = str.slice(str.length - 3, str.length);
+	const end = str.slice(str.length - 3, str.length);
 	return end + str + end;
 }
 
@@ -109,7 +109,7 @@ function last_three(str){
 */
 
 function starts_with_java(str){
-	i = str.indexOf("Java");
+	const i = str.indexOf("Java");
 	if (i == 0) {
 		return true;
 	} else {
