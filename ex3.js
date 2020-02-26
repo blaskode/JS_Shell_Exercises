@@ -101,6 +101,56 @@ function test(str){
 	return result;
 }
 
+/*
+	(8) If syllables are separated by dashes, count the number of syllables in 
+	a word.
+*/
+function numberSyllables(word) {
+	const regex = /-/g;
+	const found = (word.match(regex) || []).length + 1;
+	return found;
+}
+
+function matchHouses(step) {
+	if (step == 0) {
+		return 0;
+	} else if (step == 1) {
+		return 6;
+	} else {
+		return 5 + matchHouses(step - 1);
+	}
+}
+
+function findSmallestNum(arr) {
+	function compare (a, b) {return a - b}
+	let arr = arr.sort(compare);
+	return arr.shift();
+}
+
+function addEnding(arr, ending) {
+	let array = [];
+	arr.forEach(element => array.push(element+=ending));
+	return array;
+}
+
+/*
+	1:06 => 66
+	1:60 => false
+*/
+function minutesToSeconds(time) {
+	let t = time.split(':');
+	t[0] = parseInt(t[0]);
+	t[1] = parseInt(t[1]);
+	if (t[1] > 59) {
+		return false;
+	} else
+	return t[0] * 60 + t[1];
+}
+
+function removeVowels(str) {
+  return str.replace(/[aeiou]/g, '')
+}
+
 
 
 
